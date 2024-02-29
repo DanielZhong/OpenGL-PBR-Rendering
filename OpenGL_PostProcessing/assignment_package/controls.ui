@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>controls</class>
+ <widget class="QWidget" name="controls">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>248</width>
+    <height>312</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Control Panel</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Shader Options</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="title">
+    <string>Post-Process Shader</string>
+   </property>
+   <widget class="QComboBox" name="postprocessShaderComboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sobel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gaussian Blur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pointilism</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Anaglyph</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="title">
+    <string>Surface Shader</string>
+   </property>
+   <widget class="QComboBox" name="surfaceShaderComboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <item>
+     <property name="text">
+      <string>Lambert</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Blinn-Phong</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Matcap</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Vertex Deformation</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>210</y>
+     <width>201</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="matcapTab">
+    <attribute name="title">
+     <string>Matcap Options</string>
+    </attribute>
+    <widget class="QComboBox" name="matcapComboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font/>
+     </property>
+     <item>
+      <property name="text">
+       <string>Red Wax</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Silver</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Plastic</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gold</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Haunted</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Surface Normals</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
