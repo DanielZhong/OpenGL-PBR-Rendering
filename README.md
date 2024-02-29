@@ -14,7 +14,7 @@
 |:-:|:-:|:-:|:-:|
 |C++ Rasterizer|Blinn-Phong|Guassin Blur|MatCap|
 |<img src="Sobel.jpg" width="100%">|<img src="pointlism.jpg" width="100%">|<img src="ToonShader.gif" width="100%">|<img src="Anaglyph.gif" width="100%">|
-|Sobel Filter|Pointilism|Toon Shader|Anaglyph|
+|Sobel Filter|Pointilism|Toon Shader + Perlin Noise|Anaglyph|
 
 ## Paht Tracing
 |<img src="DirectCornellBoxPointLight.png" width="100%">|<img src="DirectCornellBoxSpotLight.png" width="100%">|<img src="DirectCornellBoxTwoLights.png" width="100%">|
