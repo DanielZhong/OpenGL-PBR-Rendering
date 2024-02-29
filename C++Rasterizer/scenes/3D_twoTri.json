@@ -1,0 +1,11 @@
+{
+	"objects":
+	[
+		{
+			"type": "obj",
+			"name": "Square",
+			"filename": "twoTri.obj",
+			"texture": "tex_nor_maps/twoTriTex.png"
+		}
+	]
+}

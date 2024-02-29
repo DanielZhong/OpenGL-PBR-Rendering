@@ -1,0 +1,11 @@
+{
+	"objects":
+	[
+		{
+			"type": "obj",
+			"name": "Square",
+			"filename": "square.obj",
+			"texture": "tex_nor_maps/171.JPG"
+		}
+	]
+}

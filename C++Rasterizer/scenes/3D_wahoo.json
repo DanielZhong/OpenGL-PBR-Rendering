@@ -1,0 +1,11 @@
+{
+	"objects":
+	[
+		{
+			"type": "obj",
+			"name": "Wahoo",
+			"filename": "wahoo.obj",
+			"texture": "tex_nor_maps/wahoo.bmp"
+		}
+	]
+}

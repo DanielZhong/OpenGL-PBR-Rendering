@@ -1,0 +1,11 @@
+{
+	"objects":
+	[
+		{
+			"type": "obj",
+			"name": "Cube",
+			"filename": "cube.obj",
+			"texture": "tex_nor_maps/156.JPG"
+		}
+	]
+}
