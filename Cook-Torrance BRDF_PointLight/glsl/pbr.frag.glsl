@@ -157,7 +157,7 @@ void main() {
 
         // Fresnel term using Schlick's approximation
         vec3 R = mix(vec3(0.04), u_Albedo, u_Metallic);
-        vec3 F = R + (1.0 - R) * pow(1.0 - max(dot(fs_Nor, wo), 0.0), 5.0);
+        vec3 F = R + (1.0 - R) * pow(1.0 - max(dot(wh, wo), 0.0), 5.0);
 
         float D, G;
         // D and G term
