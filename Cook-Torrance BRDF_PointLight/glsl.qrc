@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>glsl/pbr.frag.glsl</file>
+        <file>glsl/pbr.vert.glsl</file>
+    </qresource>
+</RCC>
