@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>textures/brdfLUT.png</file>
+    </qresource>
+</RCC>

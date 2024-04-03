@@ -1,0 +1,8 @@
+{
+	"obj" : "torus.obj",
+	"albedo" : "jasper/jasper_basecolor.png",
+	"metallic" : "jasper/jasper_metallic.png",
+	"normal" : "jasper/jasper_normal.png",
+	"roughness" : "jasper/jasper_roughness.png",
+	"ambientOcclusion" : "jasper/jasper_AO.png"
+}

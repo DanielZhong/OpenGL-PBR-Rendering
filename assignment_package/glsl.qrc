@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>glsl/pbr.frag.glsl</file>
+        <file>glsl/pbr.vert.glsl</file>
+        <file>glsl/cubemap.vert.glsl</file>
+        <file>glsl/cubemap_uv_conversion.frag.glsl</file>
+        <file>glsl/envMap.frag.glsl</file>
+        <file>glsl/envMap.vert.glsl</file>
+        <file>glsl/diffuseConvolution.frag.glsl</file>
+        <file>glsl/glossyConvolution.frag.glsl</file>
+    </qresource>
+</RCC>
