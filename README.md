@@ -1,13 +1,11 @@
-# OpenGL-RealTime-Offline-Rendering
+# OpenGL-RealTime&Offline-Rendering
 
 * Ruijun(Daniel) Zhong
     * [LinkedIn](https://www.linkedin.com/in/daniel-z-73158b152/)    
     * [Personal Website](https://www.danielzhongportfolio.com/)
 * Tested on: 
   * Core(TM) i7-12700K 3.61 GHz 32.0 GB, NVIDIA GeForce RTX 3070 Ti (personal computer)   
-    * Maya 2022, Houdini 20.0.590, Visua Studio 2022
-
-
+    * QT 6
 
 # Real Time Rendering
 * **C++ Rasterizer** converts 3D models into 2D images by projecting vertices onto a screen and filling in the resulting shapes (polygons). Implement by iterating over the polygons, converting 3D coordinates to 2D screen space, and using scanline filling or edge functions to color pixels within the polygons.
@@ -32,6 +30,50 @@
 |C++ Rasterizer|Blinn-Phong|Guassin Blur|MatCap|
 |<img src="Sobel.jpg" width="100%">|<img src="pointlism.jpg" width="100%">|<img src="ToonShader.gif" width="100%">|<img src="Anaglyph.gif" width="100%">|
 |Sobel Filter|Pointilism|Toon Shader + Perlin Noise|Anaglyph|
+
+## PBR Cook-Torrance BRDF(point lights)
+Following project  outlines the implementation of **Physically Based Shading (PBS)** in OpenGL, focusing on realistic material rendering. The approach is inspired by real-world physics principles and advanced computational techniques to simulate light interaction with surfaces. This method enhances visual realism, particularly for metallic and rough surfaces.  
+
+The Cook-Torrance BRDF is a model used in computer graphics to simulate light interaction with rough surfaces, ideal for rendering realistic materials like metals and plastics. It combines Fresnel reflectance, geometric attenuation, and microfacet distribution to account for light reflection and scattering. The formula:  
+
+fr(ωi, ωo) = [F(ωi, h) * G(ωi, ωo, h) * D(h)] / [4 * (ωi · n) * (ωo · n)]
+fr(ωi, ωo): BRDF function, ratio of reflected radiance to incident irradiance.  
+
+* ωi: Incident light direction.
+* ωo: Reflected light direction.
+* h: Half-vector between ωi and ωo.
+* n: Surface normal.
+* F: Fresnel term for light reflection at angles.
+* G: Geometric attenuation for shadowing/masking.
+* D: Microfacet distribution for surface microstructure.  
+
+Crucial for real-time graphics, the Cook-Torrance BRDF strikes a balance between visual realism and computational efficiency, enabling complex lighting effects in interactive applications without extensive resource demands.
+|<img src="default.png" width="100%">|<img src="fullMetal.png" width="100%">|<img src="fullPlastic.png" width="100%">|
+|:-:|:-:|:-:|
+|default|Full Metal|Full Plastic|
+|<img src="lowRough.png" width="100%">|<img src="highRough.png" width="100%">|<img src="XC.jpg" width="100%">|
+|Low Rough|High Rough|Procedural Texture|
+
+## PBR Cook-Torrance BRDF(Environment Map)
+This implementation is base on the paper [Karis, B. (2013). Real Shading in Unreal Engine 4](https://blog.selfshadow.com/publications/s2013-shading-course/karis/s2013_pbs_epic_notes_v2.pdf)
+
+Insights from the paper:  
+**Assuming wo as Surface Normal**: A simplification made in this approach is to treat the view direction vector (wo) as equivalent to the surface normal. This assumption helps reduce complexity and computational overhead during certain calculations, particularly in the glossy reflection precomputation.  
+**Generating wi Samples with Hammersley Sequence**: During the precomputation of the glossy component, the Hammersley sequence—a low-discrepancy quasi-random sequence—is used to generate sample vectors (wi). These samples are distributed around the halfway vector (wh) and are crucial for importance sampling, ensuring that the samples are more focused around the primary reflection directions based on surface roughness.
+
+Features:
+* **Mipmapping for Roughness**: Utilizes mipmaps to dynamically adjust surface roughness, enhancing detail and minimizing artifacts.  
+* **Precomputation Techniques**: Employs precomputation for both diffuse and glossy components, optimizing runtime performance.  
+* **Gamma Correction**: Ensures accurate color representation by applying gamma correction to the final rendered image.  
+* **Displacement and Normal Mapping**: Incorporates displacement mapping for geometric detail and normal mapping for surface complexity.  
+* **Optimizations**: employs mipmapping and Hammersley sequences for efficiency.
+* **Future Optimization** Plans for reflection probe integration to capture dynamic environmental reflections
+
+|<img src="r2.jpg" width="100%">|<img src="r3.jpg" width="100%">|<img src="r4.jpg" width="100%">|
+|:-:|:-:|:-:|
+|0% metallic, 0% rough, RBG = 0 0 0|100% metallic, 0% rough, RGB = 0 0 0|100% metallic, 25% rough, RGB = 1 1 1|
+|<img src="r1.jpg" width="100%">|<img src="r5.jpg" width="100%">|<img src="r6.jpg" width="100%">|
+|Custom Texture|Displacement Map|Normal Map|
 
 # Path Tracing
 ## Direct Lighting
@@ -64,23 +106,3 @@ By integrating these advanced techniques, my engine delivers exceptional realism
 |Custom Scene|Perfect Mirror|Rough Mirror|
 
 
-## Cook-Torrance BRDF(point lights)
-The Cook-Torrance BRDF is a model used in computer graphics to simulate light interaction with rough surfaces, ideal for rendering realistic materials like metals and plastics. It combines Fresnel reflectance, geometric attenuation, and microfacet distribution to account for light reflection and scattering. The formula:  
-
-fr(ωi, ωo) = [F(ωi, h) * G(ωi, ωo, h) * D(h)] / [4 * (ωi · n) * (ωo · n)]
-fr(ωi, ωo): BRDF function, ratio of reflected radiance to incident irradiance.  
-
-* ωi: Incident light direction.
-* ωo: Reflected light direction.
-* h: Half-vector between ωi and ωo.
-* n: Surface normal.
-* F: Fresnel term for light reflection at angles.
-* G: Geometric attenuation for shadowing/masking.
-* D: Microfacet distribution for surface microstructure.  
-
-Crucial for real-time graphics, the Cook-Torrance BRDF strikes a balance between visual realism and computational efficiency, enabling complex lighting effects in interactive applications without extensive resource demands.
-|<img src="default.png" width="100%">|<img src="fullMetal.png" width="100%">|<img src="fullPlastic.png" width="100%">|
-|:-:|:-:|:-:|
-|default|Full Metal|Full Plastic|
-|<img src="lowRough.png" width="100%">|<img src="highRough.png" width="100%">|<img src="XC.jpg" width="100%">|
-|Low Rough|High Rough|Procedural Texture|
