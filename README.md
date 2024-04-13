@@ -31,7 +31,7 @@ Insights from the paper:
 **Generating wi Samples with Hammersley Sequence**: During the precomputation of the glossy component, the Hammersley sequence—a low-discrepancy quasi-random sequence—is used to generate sample vectors (wi). These samples are distributed around the halfway vector (wh) and are crucial for importance sampling, ensuring that the samples are more focused around the primary reflection directions based on surface roughness.
 
 Features:
-* **Mipmapping for Roughness**: Utilizes mipmaps to dynamically adjust surface roughness, enhancing detail and minimizing artifacts.  
+* **Mipmapping for Roughness**: Utilizes mipmaps to dynamically adjust surface roughness, enhancing detail and minimizing artifacts by preventing excessive sampling of overly bright light sources.  
 * **Precomputation Techniques**: Employs precomputation for both diffuse and glossy components, optimizing runtime performance.  
 * **Gamma Correction**: Ensures accurate color representation by applying gamma correction to the final rendered image.  
 * **Displacement and Normal Mapping**: Incorporates displacement mapping for geometric detail and normal mapping for surface complexity.  
