@@ -38,12 +38,12 @@ Features:
 * **Displacement and Normal Mapping**: Incorporates displacement mapping for geometric detail and normal mapping for surface complexity.  
 * **Optimizations**: employs mipmapping, binaray search Ray March and Hammersley sequences for efficiency.
 
-|<img src="r2.jpg" width="100%">|<img src="r3.jpg" width="100%">|<img src="r4.jpg" width="100%">|
+|<img src="result/r2.jpg" width="100%">|<img src="result/r3.jpg" width="100%">|<img src="result/r4.jpg" width="100%">|
 |:-:|:-:|:-:|
 |0% metallic, 0% rough, RBG = 0 0 0|100% metallic, 0% rough, RGB = 0 0 0|100% metallic, 25% rough, RGB = 1 1 1|
-|<img src="r1.jpg" width="100%">|<img src="r5.jpg" width="100%">|<img src="r6.jpg" width="100%">|
+|<img src="result/r1.jpg" width="100%">|<img src="result/r5.jpg" width="100%">|<img src="result/r6.jpg" width="100%">|
 |Custom Texture|Displacement Map|Normal Map|
-|<img src="SSR.jpg" width="100%">|<img src="SSR2.jpg" width="100%">|<img src="SSR3.jpg" width="100%">|
+|<img src="result/SSR.jpg" width="100%">|<img src="result/SSR2.jpg" width="100%">|<img src="result/SSR3.jpg" width="100%">|
 |SSR|SSR|SSR|
 ## Post Processing
 * **C++ Rasterizer** converts 3D models into 2D images by projecting vertices onto a screen and filling in the resulting shapes (polygons). Implement by iterating over the polygons, converting 3D coordinates to 2D screen space, and using scanline filling or edge functions to color pixels within the polygons.
@@ -63,21 +63,21 @@ Features:
 * **Anaglyph** generates a stereo image by combining two differently colored images from slightly offset perspectives. Implement by separating and then recombining the color channels of these images, creating a 3D effect when viewed with color-filtered glasses.
 
 
-|<img src="rasterizer.jpg" width="100%">|<img src="BlinnPhong.jpg" width="100%">|<img src="GuassinBlur.jpg" width="100%">|<img src="MatCap.jpg" width="100%">|
+|<img src="result/rasterizer.jpg" width="100%">|<img src="result/BlinnPhong.jpg" width="100%">|<img src="result/GuassinBlur.jpg" width="100%">|<img src="result/MatCap.jpg" width="100%">|
 |:-:|:-:|:-:|:-:|
 |C++ Rasterizer|Blinn-Phong|Guassin Blur|MatCap|
-|<img src="Sobel.jpg" width="100%">|<img src="pointlism.jpg" width="100%">|<img src="ToonShader.gif" width="100%">|<img src="Anaglyph.gif" width="100%">|
+|<img src="result/Sobel.jpg" width="100%">|<img src="result/pointlism.jpg" width="100%">|<img src="result/ToonShader.gif" width="100%">|<img src="result/Anaglyph.gif" width="100%">|
 |Sobel Filter|Pointilism|Toon Shader + Perlin Noise|Anaglyph|
 
 # Path Tracing
 ## Direct Lighting
-|<img src="DirectCornellBoxPointLight.png" width="100%">|<img src="DirectCornellBoxSpotLight.png" width="100%">|<img src="DirectCornellBoxTwoLights.png" width="100%">|
+|<img src="result/DirectCornellBoxPointLight.png" width="100%">|<img src="result/DirectCornellBoxSpotLight.png" width="100%">|<img src="result/DirectCornellBoxTwoLights.png" width="100%">|
 |:-:|:-:|:-:|
 |Point Light|Spot Light|Area Lights|
 
 
 ## Indirect Lighting
-|<img src="cornellBoxNaive.png" width="100%">|<img src="result2.jpg" width="100%">|<img src="result3.jpg" width="100%">|
+|<img src="result/cornellBoxNaive.png" width="100%">|<img src="result/result2.jpg" width="100%">|<img src="result/result3.jpg" width="100%">|
 |:-:|:-:|:-:|
 |Cornel Box|BSDF Diffuse|Reflect & Transmit|
 
@@ -93,10 +93,10 @@ Features:
 Conversely, my Light Source (LE) Sampling strategy targets the illumination sources in the scene, prioritizing rays that emanate directly from these lights. This approach is essential for rendering direct lighting effects, particularly from compact or intense light sources, thereby preventing them from being overlooked due to their limited spatial influence.
 
 By integrating these advanced techniques, my engine delivers exceptional realism and efficiency in rendering various lighting conditions, from the subtle interplay of indirect light to the bold contrasts of direct illumination.
-|<img src="result5.jpg" width="100%">|<img src="result.jpg" width="100%">|<img src="result9.jpg" width="100%">|
+|<img src="result/result5.jpg" width="100%">|<img src="result/result.jpg" width="100%">|<img src="result/result9.jpg" width="100%">|
 |:-:|:-:|:-:|
 |Cornel Box|Microfacet Metal|Envr Map|
-|<img src="result8.jpg" width="100%">|<img src="result6.jpg" width="100%">|<img src="result7.jpg" width="100%">|
+|<img src="result/result8.jpg" width="100%">|<img src="result/result6.jpg" width="100%">|<img src="result/result7.jpg" width="100%">|
 |Custom Scene|Perfect Mirror|Rough Mirror|
 
 
