@@ -1,7 +1,0 @@
-{
-	"obj" : "torus.obj",
-	"albedo" : "fishScale/fish_scale_basecolor.png",
-	"metallic" : "fishScale/fish_scale_metallic.png",
-	"normal" : "fishScale/fish_scale_normal.png",
-	"roughness" : "fishScale/fish_scale_roughness.png"
-}

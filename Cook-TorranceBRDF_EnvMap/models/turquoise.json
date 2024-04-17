@@ -1,0 +1,7 @@
+{
+	"obj" : "roundedCube.obj",
+	"albedo" : "turquoise/Turquoise_basecolor.png",
+	"metallic" : "turquoise/Turquoise_metallic.png",
+	"normal" : "turquoise/Turquoise_normal.png",
+	"roughness" : "turquoise/Turquoise_roughness.png"
+}

@@ -1,7 +1,0 @@
-{
-	"obj" : "cerberus/cerberus.obj",
-	"albedo" : "cerberus/Cerberus_A.png",
-	"metallic" : "cerberus/Cerberus_M.png",
-	"normal" : "cerberus/Cerberus_N.png",
-	"roughness" : "cerberus/Cerberus_R.png"
-}

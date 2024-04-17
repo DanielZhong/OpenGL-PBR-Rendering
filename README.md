@@ -31,19 +31,20 @@ Insights from the paper:
 **Generating wi Samples with Hammersley Sequence**: During the precomputation of the glossy component, the Hammersley sequence—a low-discrepancy quasi-random sequence—is used to generate sample vectors (wi). These samples are distributed around the halfway vector (wh) and are crucial for importance sampling, ensuring that the samples are more focused around the primary reflection directions based on surface roughness.
 
 Features:
+* **Screen Space Reflection (SSR)** Screen Space Reflection (SSR) is a rendering technique that enhances visual realism by enabling objects within a scene to reflect both themselves and their surroundings. The process starts with a G-buffer that captures essential geometric data, including depth and normals. Using this data, SSR employs ray marching to trace rays within the screen space, identifying reflection points on surfaces. This allows objects to reflect their surroundings and themselves when visible in the screen space. After ray tracing, Gaussian blur is applied to soften the reflections, ensuring they blend naturally with the scene, thus significantly enhancing visual immersion.
 * **Mipmapping for Roughness**: Utilizes mipmaps to dynamically adjust surface roughness, enhancing detail and minimizing artifacts by preventing excessive sampling of overly bright light sources.  
 * **Precomputation Techniques**: Employs precomputation for both diffuse and glossy components, optimizing runtime performance.  
 * **Gamma Correction**: Ensures accurate color representation by applying gamma correction to the final rendered image.  
 * **Displacement and Normal Mapping**: Incorporates displacement mapping for geometric detail and normal mapping for surface complexity.  
-* **Optimizations**: employs mipmapping and Hammersley sequences for efficiency.
-* **Future Optimization** Plans for reflection probe integration to capture dynamic environmental reflections
+* **Optimizations**: employs mipmapping, binaray search Ray March and Hammersley sequences for efficiency.
 
 |<img src="r2.jpg" width="100%">|<img src="r3.jpg" width="100%">|<img src="r4.jpg" width="100%">|
 |:-:|:-:|:-:|
 |0% metallic, 0% rough, RBG = 0 0 0|100% metallic, 0% rough, RGB = 0 0 0|100% metallic, 25% rough, RGB = 1 1 1|
 |<img src="r1.jpg" width="100%">|<img src="r5.jpg" width="100%">|<img src="r6.jpg" width="100%">|
 |Custom Texture|Displacement Map|Normal Map|
-
+|<img src="SSR.jpg" width="100%">|<img src="SSR2.jpg" width="100%">|<img src="SSR3.jpg" width="100%">|
+|SSR|SSR|SSR|
 ## Post Processing
 * **C++ Rasterizer** converts 3D models into 2D images by projecting vertices onto a screen and filling in the resulting shapes (polygons). Implement by iterating over the polygons, converting 3D coordinates to 2D screen space, and using scanline filling or edge functions to color pixels within the polygons.
 

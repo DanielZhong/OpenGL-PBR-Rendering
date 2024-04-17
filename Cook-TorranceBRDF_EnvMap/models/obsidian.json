@@ -1,0 +1,8 @@
+{
+	"obj" : "roundedCube.obj",
+	"albedo" : "obsidian/obsidian_basecolor.png",
+	"metallic" : "obsidian/obsidian_metallic.png",
+	"normal" : "obsidian/obsidian_normal.png",
+	"roughness" : "obsidian/obsidian_roughness.png",
+	"displacement" : "obsidian/obsidian_height.png"
+}
