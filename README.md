@@ -1,4 +1,4 @@
-# OpenGL-RealTime&Offline-Rendering
+# OpenGL-Rendering-Projects
 
 * Ruijun(Daniel) Zhong
     * [LinkedIn](https://www.linkedin.com/in/daniel-z-73158b152/)    
