@@ -160,10 +160,10 @@ During each update cycle, the program verifies if the 81 chunks around the playe
 </details>
 </details>
 
-|<img src="Result/Result (1).jpg" width="100%">|<img src="Result/Result (3).jpg" width="100%">|<img src="Result/Result (6).jpg" width="100%">|<img src="Result/Result (4).jpg" width="100%">|
+|<img src="result/Result (1).jpg" width="100%">|<img src="result/Result (3).jpg" width="100%">|<img src="result/Result (6).jpg" width="100%">|<img src="result/Result (4).jpg" width="100%">|
 |:-:|:-:|:-:|:-:|
 |Demo|Demo|Demo|Demo|
-|<img src="Result/AlbedoTexture_MC.png" width="100%">|<img src="Result/NormalTexture_MC.png" width="100%">|<img src="Result/ShadowTexture_MC.png" width="100%">|<img src="Result/LightingTexture_MC.png" width="100%">|
+|<img src="result/AlbedoTexture_MC.png" width="100%">|<img src="result/NormalTexture_MC.png" width="100%">|<img src="result/ShadowTexture_MC.png" width="100%">|<img src="result/LightingTexture_MC.png" width="100%">|
 |Albedo|Normal|Shadow|Lighting|
 
 
