@@ -46,12 +46,12 @@ Features:
 |Custom Texture|Displacement Map|Normal Map|
 |<img src="Result/SSR.jpg" width="100%">|<img src="Result/SSR2.jpg" width="100%">|<img src="Result/SSR3.jpg" width="100%">|
 |SSR|SSR|SSR|
-|<img src="result/subsurface_scattering_original.jpg" width="100%">|<img src="result/subsurface_scattering1.jpg" width="100%">|<img src="result/subsurface_scattering.jpg" width="100%">|
+|<img src="Result/subsurface_scattering_original.jpg" width="100%">|<img src="Result/subsurface_scattering1.jpg" width="100%">|<img src="Result/subsurface_scattering.jpg" width="100%">|
 |Original|SSS Color|SSS Result|
 
 ### **Signed Distance Function (SDF)**: A mathematical representation used to describe objects in a scene by calculating the shortest distance from any point in space to the surface of an object. Combine effect to PBR Cook Torance Effect:
 ## [DEMO VIDEO: SDF ](https://drive.google.com/file/d/1W4WBu46-Y60jNKJAC1WHqdd-lvt4BKIu/view?usp=sharing)
-<img src="result/Infinity.jpg">
+<img src="Result/Infinity.jpg">
 
 ## Mini Minecraft Game Engine (In progress adding PBR effects)
  ### Key features:
