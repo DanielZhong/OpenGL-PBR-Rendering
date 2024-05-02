@@ -31,7 +31,8 @@ Insights from the paper:
 **Generating wi Samples with Hammersley Sequence**: During the precomputation of the glossy component, the Hammersley sequence—a low-discrepancy quasi-random sequence—is used to generate sample vectors (wi). These samples are distributed around the halfway vector (wh) and are crucial for importance sampling, ensuring that the samples are more focused around the primary reflection directions based on surface roughness.
 
 Features:
-* **Screen Space Reflection (SSR)** Screen Space Reflection (SSR) is a rendering technique that enhances visual realism by enabling objects within a scene to reflect both themselves and their surroundings. The process starts with a G-buffer that captures essential geometric data, including depth and normals. Using this data, SSR employs ray marching to trace rays within the screen space, identifying reflection points on surfaces. This allows objects to reflect their surroundings and themselves when visible in the screen space. After ray tracing, Gaussian blur is applied to soften the reflections, ensuring they blend naturally with the scene, thus significantly enhancing visual immersion.
+* **Screen Space Reflection (SSR)**: Screen Space Reflection (SSR) is a rendering technique that enhances visual realism by enabling objects within a scene to reflect both themselves and their surroundings. The process starts with a G-buffer that captures essential geometric data, including depth and normals. Using this data, SSR employs ray marching to trace rays within the screen space, identifying reflection points on surfaces. This allows objects to reflect their surroundings and themselves when visible in the screen space. After ray tracing, Gaussian blur is applied to soften the reflections, ensuring they blend naturally with the scene, thus significantly enhancing visual immersion.
+* **Subsurface Scattering  (SSS)**: Subsurface Scattering is a technique used in rendering to simulate the light that penetrates a translucent material, scatters internally, and exits from a different location. This effect is crucial for rendering materials like skin, wax, marble, or leaves, where light does not just bounce off the surface but travels through the material, creating a softer, diffused look. SSS enhances the realism of digital objects by mimicking the way light interacts with the internal structure of these semi-transparent materials, lending them a more lifelike appearance.
 * **Mipmapping for Roughness**: Utilizes mipmaps to dynamically adjust surface roughness, enhancing detail and minimizing artifacts by preventing excessive sampling of overly bright light sources.  
 * **Precomputation Techniques**: Employs precomputation for both diffuse and glossy components, optimizing runtime performance.  
 * **Gamma Correction**: Ensures accurate color representation by applying gamma correction to the final rendered image.  
@@ -45,6 +46,12 @@ Features:
 |Custom Texture|Displacement Map|Normal Map|
 |<img src="Result/SSR.jpg" width="100%">|<img src="Result/SSR2.jpg" width="100%">|<img src="Result/SSR3.jpg" width="100%">|
 |SSR|SSR|SSR|
+|<img src="result/subsurface_scattering_original.jpg" width="100%">|<img src="result/subsurface_scattering1.jpg" width="100%">|<img src="result/subsurface_scattering.jpg" width="100%">|
+|Original|SSS Color|SSS Result|
+
+### **Signed Distance Function (SDF)**: A mathematical representation used to describe objects in a scene by calculating the shortest distance from any point in space to the surface of an object. Combine effect to PBR Cook Torance Effect:
+## [DEMO VIDEO: SDF ](https://drive.google.com/file/d/1W4WBu46-Y60jNKJAC1WHqdd-lvt4BKIu/view?usp=sharing)
+<img src="result/Infinity.jpg">
 
 ## Mini Minecraft Game Engine (In progress adding PBR effects)
  ### Key features:
