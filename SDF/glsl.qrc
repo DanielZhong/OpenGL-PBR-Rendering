@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>glsl/cubemap.vert.glsl</file>
+        <file>glsl/cubemap_uv_conversion.frag.glsl</file>
+        <file>glsl/envMap.frag.glsl</file>
+        <file>glsl/envMap.vert.glsl</file>
+        <file>glsl/diffuseConvolution.frag.glsl</file>
+        <file>glsl/glossyConvolution.frag.glsl</file>
+        <file>glsl/passthrough.vert.glsl</file>
+        <file>glsl/sdf.frag.glsl</file>
+        <file>glsl/sdf.pbr.glsl</file>
+        <file>glsl/sdf.defines.glsl</file>
+    </qresource>
+</RCC>
