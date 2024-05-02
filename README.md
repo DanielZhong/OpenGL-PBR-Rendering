@@ -50,8 +50,11 @@ Features:
 |Original|SSS Color|SSS Result|
 
 ### **Signed Distance Function (SDF)**: A mathematical representation used to describe objects in a scene by calculating the shortest distance from any point in space to the surface of an object. Combine effect to PBR Cook Torance Effect:
-## [DEMO VIDEO: SDF ](https://drive.google.com/file/d/1W4WBu46-Y60jNKJAC1WHqdd-lvt4BKIu/view?usp=sharing)
-<img src="Result/Infinity.jpg">
+## [DEMO VIDEO: SDF ](https://drive.google.com/file/d/1W4WBu46-Y60jNKJAC1WHqdd-lvt4BKIu/view?usp=sharing)  
+
+|<img src="Result/cat.png" width="100%">|<img src="Result/Infinity.jpg" width="100%">|
+|:-:|:-:|
+|Original SDF Cat|Infinity Cats|
 
 ## Mini Minecraft Game Engine (In progress adding PBR effects)
  ### Key features:
