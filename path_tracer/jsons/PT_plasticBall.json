@@ -1,0 +1,54 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 2.5, 0],
+        "eye" : [0, 5.5, -30],
+        "worldUp" : [0, 1, 0],
+        "fov" : 19.5,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [
+        {
+          "shape" : "Sphere",
+          "name" : "Plastic Ball",
+          "material" : "plasticWhite",
+          "transform" : {
+            "translate" : [0, 2.5, 0],
+            "rotate" : [0, 0, 0],
+            "scale" : [3, 3, 1]
+          }
+        }
+      ],
+      "lights" : [
+        {
+          "shape" : "Disc",
+          "name" : "Light Source",
+          "type" : "DiffuseAreaLight",
+          "lightColor" : [17,12,4],
+          "intensity" : 2,
+          "transform" : {
+            "translate" : [0,7.45,0],
+            "rotate" : [90,0,0],
+            "scale" : [1.5, 1.5, 1]
+          },
+          "isDelta" : false,
+          "twoSided" : true
+        }
+      ],
+      "materials" : [
+        {
+          "type" : "PlasticMaterial",
+          "name" : "plasticWhite",
+            "Kd" : [0.05, 0.05, 0.05],
+            "Ks" : [1, 1, 1],
+          "roughness": 0.5
+        }
+      ]
+    }
+  }
+]
+}

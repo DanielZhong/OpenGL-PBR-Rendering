@@ -1,0 +1,118 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 0, 0],
+        "eye" : [5, 8, -5],
+        "worldUp" : [0, 1, 0],
+        "fov" : 45,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Floor",
+          "material" : "chromeMirror2",
+          "transform" : {
+            "translate" : [0, -3, 0],
+            "rotate" : [-90, 0, 0],
+            "scale" : [50, 50, 3]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "Sphere3",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [3, 1, 0],
+            "rotate" : [0, 0, 0],
+            "scale" : [5, 5, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "Sphere",
+          "material" : "texturedMaterial",
+          "transform" : {
+            "translate" : [3, 1, 0],
+            "rotate" : [0, 0, 0],
+            "scale" : [1, 1, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "Sphere2",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [0, 1, 0],
+            "rotate" : [0, 0, 0],
+            "scale" : [1.2, 1.5, 5]
+          }
+        }
+      ],
+      "lights": [
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteWhite",
+          "Kd" : [1,1,1],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteRed",
+          "Kd" : [1,0,0],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteGreen",
+          "Kd" : [0,1,0],
+          "sigma": 0
+        },
+        {
+          "type": "TransmissiveMaterial",
+          "name": "transmissiveMaterial",
+          "Kt": [0.7, 1, 0.7],
+          "Kr": [1, 1, 1],
+          "eta": 1.6
+        },
+        {
+          "type": "MatteMaterial",
+          "name": "texturedMaterial",
+          "Kd" : [0,1,1],
+          "textureMap": "tex_nor_maps/2k_moon.jpg"
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 0, 0]
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "chromeMirror2",
+          "Kr": [0.1, 0.1, 0.1],
+          "roughness": 0.1
+        },
+        {
+          "type": "MirrorMaterial",
+          "name": "glossyRough",
+          "Kr": [1, 0.395, 0.375],
+          "Kd" : [1,1,0],
+          "roughness": 0.7
+        },
+        {
+          "type": "TransmissiveMaterial",
+          "name": "transmissiveMaterial2",
+          "Kt": [0.7, 1, 0.7],
+          "eta": 1.3
+        }
+      ]
+    }
+  }
+]
+}

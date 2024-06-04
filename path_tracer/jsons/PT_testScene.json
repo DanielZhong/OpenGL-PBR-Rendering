@@ -1,0 +1,99 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 0, 0],
+        "eye" : [5, 8, -5],
+        "worldUp" : [0, 1, 0],
+        "fov" : 45,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Floor",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [0, 0, 0],
+            "rotate" : [-90, 0, 0],
+            "scale" : [10, 10, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "Red Sphere",
+          "material" : "matteRed",
+          "transform" : {
+            "translate" : [0, 1, 0],
+            "rotate" : [0, 0, 0],
+            "scale" : [1, 1, 1]
+          }
+        },
+        {
+          "shape" : "SquarePlane",
+          "name" : "Wall",
+          "material" : "matteGreen",
+          "transform" : {
+            "translate" : [-5, 2.5, 0],
+            "rotate" : [0,-90,0],
+            "scale" : [10, 5, 1]
+          }
+        }
+      ],
+      "lights" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Light Source",
+          "type" : "DiffuseAreaLight",
+          "lightColor" : [1,1,1],
+          "intensity" : 2,
+          "transform" : {
+            "translate" : [0,2.5,5],
+            "rotate" : [0,180,0],
+            "scale" : [8, 5, 1]
+          },
+          "isDelta" : false,
+          "twoSided" : true
+        },
+        {
+          "shape" : "SquarePlane",
+          "name" : "Light Source2",
+          "type" : "DiffuseAreaLight",
+          "lightColor" : [0.9,1,0.7],
+          "intensity" : 2,
+          "transform" : {
+            "translate" : [5,2.5,0],
+            "rotate" : [0,-90,0],
+            "scale" : [8, 5, 1]
+          },
+          "isDelta" : false,
+          "twoSided" : false
+        }
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteWhite",
+          "Kd" : [1,1,1],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteRed",
+          "Kd" : [1,0,0],
+          "sigma": 0
+        },
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteGreen",
+          "Kd" : [0,1,0],
+          "sigma": 0
+        }
+      ]
+    }
+  }
+]
+}

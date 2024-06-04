@@ -1,0 +1,15 @@
+#include "mattematerial.h"
+
+void MatteMaterial::ProduceBSDF(Intersection *isect) const
+{
+    isect->bsdf = std::unique_ptr<BSDF>(new BSDF(isect->worldToTangent, isect->tangentToWorld));
+    if(this->textureMap)
+    {
+        Color3f color = Material::GetImageColor(isect->uv, this->textureMap.get());
+        if(sigma == 0.f)
+        {
+            isect->bsdf->Add(LambertBRDF(color));
+        }
+        //Else do Oren-Nayar (not required implementation)
+    }
+}

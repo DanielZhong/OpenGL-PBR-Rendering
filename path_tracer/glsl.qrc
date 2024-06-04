@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>glsl/pathtracer.frag.glsl</file>
+        <file>glsl/passthrough.vert.glsl</file>
+        <file>glsl/noOp.frag.glsl</file>
+        <file>glsl/pathtracer.defines.glsl</file>
+        <file>glsl/pathtracer.intersection.glsl</file>
+        <file>glsl/pathtracer.bsdf.glsl</file>
+        <file>glsl/pathtracer.sampleWarping.glsl</file>
+        <file>glsl/cubemap.vert.glsl</file>
+        <file>glsl/cubemap_uv_conversion.frag.glsl</file>
+        <file>glsl/pathtracer.all.glsl</file>
+        <file>glsl/pathtracer.light.glsl</file>
+    </qresource>
+</RCC>
